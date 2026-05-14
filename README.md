@@ -27,12 +27,12 @@ The physical **RST** button on the Thing Plus does a hard reset.
 
 ### Required parts
 
-| Part | Model | Vendor | Price (CAD) | Link |
+| Part | Model | Price (CAD) | Link |
 |---|---|---|---|---|
-| Microcontroller | SparkFun Thing Plus ESP32-C6 | Digi-Key Canada | $34.65 | [DigiKey](https://www.digikey.ca/en/products/detail/sparkfun-electronics/22924/22321033) [Mouser](https://www.mouser.ca/ProductDetail/SparkFun/DEV-22924?qs=dbcCsuKDzFVe7EVKMM7Bfg%3D%3D)|
-| Temperature Sensor | BME280 | ABRA Electronics | $14.75 | [Abra electronics](https://abra-electronics.com/sensors/sensors-temperature-en/sens-64-3-3v.html) |
-| Battery | 3.7V 500 mAh LiPo, JST-PH | ABRA Electronics | $8.65 | [Abra electronics](https://abra-electronics.com/batteries-holders/batteries-polymer-lithium-ion/bat-lipo-3-7-500-3-7v-500mah-lithium-ion-polymer-battery.html) |
-| I2C adapter cable | Flexible Qwiic Cable — Female Jumpers | ABRA Electronics | $3.37 | [Abra electronics](https://abra-electronics.com/interconnects/connectors/qwiic/flexible-qwiic-cable-female-jumper-4-pin.html) |
+| Microcontroller | SparkFun Thing Plus ESP32-C6 | $34.65 | [DigiKey](https://www.digikey.ca/en/products/detail/sparkfun-electronics/22924/22321033) [Mouser](https://www.mouser.ca/ProductDetail/SparkFun/DEV-22924?qs=dbcCsuKDzFVe7EVKMM7Bfg%3D%3D)|
+| Temperature Sensor | BME280 | $14.75 | [Abra electronics](https://abra-electronics.com/sensors/sensors-temperature-en/sens-64-3-3v.html) |
+| Battery | 3.7V 500 mAh LiPo, JST-PH | $8.65 | [Abra electronics](https://abra-electronics.com/batteries-holders/batteries-polymer-lithium-ion/bat-lipo-3-7-500-3-7v-500mah-lithium-ion-polymer-battery.html) |
+| I2C adapter cable | Flexible Qwiic Cable — Female Jumpers | $3.37 | [Abra electronics](https://abra-electronics.com/interconnects/connectors/qwiic/flexible-qwiic-cable-female-jumper-4-pin.html) |
 
 ### Also need
 
