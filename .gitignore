@@ -1,0 +1,16 @@
+# WiFi credentials and other secrets — never commit
+**/secrets.py
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+
+# MicroPython firmware binaries
+*.bin

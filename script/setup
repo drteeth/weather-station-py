@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+FIRMWARE="ESP32_GENERIC_C6-20260406-v1.28.0.bin"
+FIRMWARE_URL="https://micropython.org/resources/firmware/${FIRMWARE}"
+BME280_URL="https://raw.githubusercontent.com/robert-hh/BME280/master/bme280_float.py"
+MICRODOT_URL="https://raw.githubusercontent.com/miguelgrinberg/microdot/main/src/microdot/microdot.py"
+
+if [[ ! -d .venv ]]; then
+    echo "Creating venv..."
+    python3 -m venv .venv
+fi
+
+echo "Installing requirements..."
+.venv/bin/pip install -q -r requirements.txt
+
+mkdir -p lib
+mkdir -p bin
+
+if [[ ! -f "${FIRMWARE}" ]]; then
+    echo "Downloading MicroPython firmware..."
+    curl -fL -o "bin/${FIRMWARE}" "${FIRMWARE_URL}"
+fi
+
+if [[ ! -f lib/bme280.py ]]; then
+    echo "Downloading BME280 driver..."
+    curl -fL -o lib/bme280.py "${BME280_URL}"
+fi
+
+if [[ ! -f lib/microdot.py ]]; then
+    echo "Downloading Microdot..."
+    curl -fL -o lib/microdot.py "${MICRODOT_URL}"
+fi
+
+if command -v npx >/dev/null 2>&1; then
+    echo "Priming marp-cli (for slides.md)..."
+    npx -y -q @marp-team/marp-cli@latest --version >/dev/null
+else
+    echo "Note: npx not found — install Node.js to render slides.md."
+fi
+
+echo "Setup complete."

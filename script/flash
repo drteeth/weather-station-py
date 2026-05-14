@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+PORT="${PORT:-/dev/ttyACM0}"
+
+echo "Copying files to ${PORT}..."
+.venv/bin/mpremote connect "${PORT}" cp --no-verbose \
+    lib/bme280.py \
+    lib/microdot.py \
+    main.py \
+    :
+
+echo "Resetting..."
+.venv/bin/mpremote connect "${PORT}" reset

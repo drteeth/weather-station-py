@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+if ! command -v npx >/dev/null 2>&1; then
+    echo "npx not found — install Node.js first." >&2
+    exit 1
+fi
+
+# --server enables a local preview at http://localhost:8080 with hot reload.
+exec npx -y @marp-team/marp-cli@latest --server .
